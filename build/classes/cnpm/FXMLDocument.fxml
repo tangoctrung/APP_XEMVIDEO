@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: #009933;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cnpm.FXMLDocumentController">
+   <children>
+      <MenuBar prefHeight="22.0" prefWidth="259.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="OPEN">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ClickMenuItem_Openfile" text="Open video" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="CHỦ ĐỀ">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Thời trang" />
+                  <MenuItem mnemonicParsing="false" text="Giải trí" />
+                  <MenuItem mnemonicParsing="false" text="Nhảy, múa" />
+                  <MenuItem mnemonicParsing="false" text="Chính trị" />
+                  <MenuItem mnemonicParsing="false" text="Người nổi tiếng" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="THÊM VIDEO">
+               <items>
+                  <Menu mnemonicParsing="false" text="Chủ đề">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Thời trang" />
+                        <MenuItem mnemonicParsing="false" text="Giải trí" />
+                        <MenuItem mnemonicParsing="false" text="Nhảy, múa" />
+                        <MenuItem mnemonicParsing="false" text="Chính trị" />
+                        <MenuItem mnemonicParsing="false" text="Người nổi tiếng" />
+                     </items>
+                  </Menu>
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="ABOUT ME">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Authur" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Pane layoutY="25.0" prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #99CC33;">
+         <children>
+            <MediaView fx:id="mv" fitHeight="540.0" fitWidth="960.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="565.0" prefHeight="100.0" prefWidth="960.0" style="-fx-background-color: #6666FF;">
+         <children>
+            <Slider fx:id="seeSlider" max="513.0" prefHeight="15.0" prefWidth="960.0" />
+            <Button fx:id="btnPause_Play" layoutX="78.0" layoutY="31.0" mnemonicParsing="false" onAction="#ClickButtonPause_Play" prefHeight="41.0" prefWidth="78.0" text="PAUSE" />
+            <Button layoutX="14.0" layoutY="31.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="49.0" text="&lt;&lt;" />
+            <Button layoutX="172.0" layoutY="31.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="49.0" text="&gt;&gt;" />
+            <Slider fx:id="slider" layoutX="699.0" layoutY="44.0" onDragDone="#ChangeVolume" prefHeight="14.0" prefWidth="164.0" />
+            <Button layoutX="874.0" layoutY="39.0" mnemonicParsing="false" opacity="0.29" prefHeight="25.0" prefWidth="65.0" />
+            <Text fx:id="textVolume" layoutX="874.0" layoutY="58.0" stroke="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="65.00000587105751">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="960.0" layoutY="25.0" prefHeight="640.0" prefWidth="340.0" style="-fx-background-color: #550000;">
+         <children>
+            <ScrollPane prefHeight="640.0" prefWidth="340.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1000.0" prefWidth="300.0">
+                     <children>
+                        <GridPane prefHeight="1000.0" prefWidth="300.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="114.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="186.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                              <Hyperlink prefHeight="96.0" prefWidth="184.0" text="Hyperlink" GridPane.columnIndex="1" />
+                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+                              <Hyperlink prefHeight="96.0" prefWidth="184.0" text="Hyperlink" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
+                              <Hyperlink prefHeight="96.0" prefWidth="184.0" text="Hyperlink" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" />
+                              <Hyperlink prefHeight="96.0" prefWidth="184.0" text="Hyperlink" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" />
+                              <Hyperlink prefHeight="96.0" prefWidth="184.0" text="Hyperlink" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" />
+                              <Hyperlink prefHeight="96.0" prefWidth="184.0" text="Hyperlink" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6" />
+                              <Hyperlink prefHeight="96.0" prefWidth="184.0" text="Hyperlink" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7" />
+                              <Hyperlink prefHeight="96.0" prefWidth="184.0" text="Hyperlink" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <Hyperlink prefHeight="98.0" prefWidth="202.0" text="Hyperlink" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <Hyperlink prefHeight="101.0" prefWidth="218.0" text="Hyperlink" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" />
+                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="9" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children></Pane>
+   </children>
+</AnchorPane>
